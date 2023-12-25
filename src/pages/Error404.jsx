@@ -1,10 +1,12 @@
+import Header from "../components/Header";
+
 function Error404() {
     return (
         <div>
-            <h1>404</h1>
-            <p>Page not found</p>
-        </div>
+            <Header />
+            <h1>Erreur 404</h1>
+        </div> 
     )
 }
 
-export default Error404
+export default Error404;
