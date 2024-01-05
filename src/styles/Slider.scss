@@ -1,0 +1,53 @@
+@use './variables/variables.scss' as *;
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+
+    img {
+        height: 400px;
+        width: 100rem;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+
+    .slider-btn{
+        display: flex;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+
+        img {
+            height: 50px;
+            width: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 10px;
+        }
+
+        &.left {
+            position : absolute;
+            left: 10%;
+        }
+
+        &.right {
+            position : absolute;
+            right: 10%;
+
+            img {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .slider-dots {
+        position: absolute;
+        color: black;
+        left: 50%;
+        translate: transformY(150px);
+    }
+    
+}
