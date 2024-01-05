@@ -7,10 +7,6 @@ function Banner() {
   const { id } = useParams();
   const lodging = lodgings.find((lodging) => lodging.id === id);
 
-  if (!lodging) {
-    return <div>Lodging not found</div>;
-  }
-
   return (
     <section className="banner">
         <h1>Chez vous, partout et ailleurs</h1>

@@ -2,7 +2,7 @@ import Banner from '../components/Banner';
 import Card from '../components/Card';
 import Header from '../components/Header';
 import lodgings from '../lodgings.json';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer'
 
 function Home() {
     return (
