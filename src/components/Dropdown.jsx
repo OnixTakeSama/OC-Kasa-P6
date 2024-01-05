@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ChevronUp from '../images/chevron-up.png';
 
 const Dropdown = ({ title, dropdownContent }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -10,8 +11,8 @@ const Dropdown = ({ title, dropdownContent }) => {
     return (
         <div className={`dropdown ${isOpen ? 'open' : ''}`}>
             <button onClick={toggleDropdown}>
-                <h1>{title}</h1>
-                <span className={`chevron ${isOpen ? 'rotate' : ''}`}>&#9650;</span>
+                <h1 className='dropdown-title'>{title}</h1>
+                <span className={`chevron ${isOpen ? 'rotate' : ''}`}><img src={ChevronUp} alt="Chevron"></img></span>
             </button>
             {isOpen && (
                 <div className='dropdown-content'>

@@ -14,13 +14,17 @@
     padding: 20px;
     cursor: pointer;
     border: none;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
     background-color: $primary-color;
     width: 80%;
     height: 80px;
     border-radius: 5px;
+
+
+    .dropdown-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 24px;
+      color: $secondary-color;
+    }
 
     .chevron {
         transition: transform 0.4s ease;
