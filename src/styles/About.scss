@@ -1,6 +1,6 @@
 @use './variables/variables.scss' as *;
 
-.dropdown {
+.collapse {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
     border-radius: 5px;
 
 
-    .dropdown-title {
+    .title {
       font-family: 'Montserrat', sans-serif;
       font-size: 24px;
       color: $secondary-color;
@@ -35,19 +35,27 @@
     }   
   }
 
-  .dropdown-content {
-    display: none;
+  .content-parent {
+    height: 0px;
+    overflow: hidden;
+    transition: height ease 0.3s;
+    width: 80%;
+
+    &.show {
+      display: flex;
+      height: 130px;
+      border-radius: 0px 0px 5px 5px;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
     background-color: $secondary-color;
     color: $primary-color;
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
-  }
-
-  &.open .dropdown-content {
-    display: flex;
-    margin-top: -10px;
-    width: 1503px;
-    border-radius: 0px 0px 5px 5px;
   }
 }
