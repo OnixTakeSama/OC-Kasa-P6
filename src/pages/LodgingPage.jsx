@@ -33,30 +33,28 @@ function LodgingPage () {
             <Header />
             <div className="lodging-page">
                 <Slider lodging={selectedLodging} />
-                <section className="lodging-info">
-                    <div className="infos-header">
-                        <div className="title-location">
-                            <h1>{selectedLodging.title}</h1>
-                            <h2>{selectedLodging.location}</h2>
-                        </div>
-                        <div className="host">
-                            <h2>{selectedLodging.host.name}</h2>
-                            <img className="host-picture" src={selectedLodging.host.picture} alt={hostName} />
-                        </div>
-                    </div>
-                    <div className="infos-content">
-                        <div className='tags-rating'>
+                <section className="lodging-content">
+                        <div className="lodging">
+                            <div className="title-location">
+                                <h1>{selectedLodging.title}</h1>
+                                <h2>{selectedLodging.location}</h2>
+                            </div>
                             <div className="tags">
                                 {tag}
                             </div>
+                        </div>
+                        <div className="host-infos">
+                            <div className="host">
+                                <h2>{selectedLodging.host.name}</h2>
+                                <img className="host-picture" src={selectedLodging.host.picture} alt={hostName} />
+                            </div>
                             <Rating value={selectedLodging.rating} />
                         </div>
-                        <div className="collapses">
+                </section>
+                <div className="collapses">
                             <Collapse title="Description" content={selectedLodging.description} />
                             <Collapse title="Equipements" content={equipmentList} />
-                        </div>
-                    </div>
-                </section>
+                </div>
             </div>
             <Footer/>
         </div>
