@@ -4,16 +4,18 @@
     display: flex;
     flex-direction: column;
 
-    .lodging-info {
+    .lodging-content {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         margin-left: 5%;
         margin-right: 5%;
 
-        .infos-header {
+        .lodging {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-between;
+            margin-bottom: 30px;
             
             .title-location {
                 display: flex;
@@ -30,9 +32,44 @@
                     font-family: 'Montserrat', sans-serif;
                     font-size: 20px;
                     color: $primary-color;
-                    margin: 0;
+                    margin-bottom: 25px;
                 }
             }
+
+            .tags {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+
+                .tag {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 15px;
+                    color: white;
+                    background-color: $primary-color;
+                    padding: 5px 10px;
+                    border-radius: 10px;
+                    width: 100px;
+                    height: 30px;
+
+                    @media screen and (max-width: 768px) {
+                        width: 85px;
+                        height: 25px;
+                        font-size: 12px;
+                    }
+                }
+
+                 @media screen and (max-width: 768px) {
+                    gap: 10px;
+                 }
+            }
+        }
+
+        .host-infos {
+            display: flex;
+            flex-direction: column;
 
             .host {
                 display: flex;
@@ -40,10 +77,15 @@
                 align-items: center;
                 justify-content: space-between;
                 gap: 10px;
-                font-family: 'Montserrat', sans-serif;
-                font-size: 15x;
-                color: $primary-color;
-                font-weight: normal;
+
+                
+                h2 {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 20px;
+                    color: $primary-color;
+                    font-weight: normal;
+                    margin: 0;
+                }
 
                 .host-picture {
                     width: 65px;
@@ -51,88 +93,86 @@
                     border-radius: 50%;
                     margin-right: 10px;
                 }
-            }
-        }
 
-        .infos-content {
-            display: flex;
-            flex-direction: column;
-            margin-top: 20px;
-
-            .tags-rating {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-                .tags {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    gap: 10px;
-                    margin-bottom: 30px;
-
-                    .tag {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-family: 'Montserrat', sans-serif;
-                        font-size: 15px;
-                        color: white;
-                        background-color: $primary-color;
-                        padding: 5px 10px;
-                        border-radius: 10px;
-                        width: 100px;
-                        height: 30px;
-                    }
+                @media screen and (max-width: 768px) {
+                    
                 }
+            }
+
+            .rating {
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
                 .star.empty {
                     filter: grayscale(100%);
                 }
             }
+            
 
-            .collapses {
-                display: flex;
-                flex-direction: row;
+            @media screen and (max-width: 768px) {
+                flex-direction: row-reverse;
                 justify-content: space-between;
+                margin-bottom: 20px;
+            }       
+        }
 
-                .collapse {
-                    display: flex;
-                    flex-direction: column;
-                    width: 800px;
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+        }
 
-                    button {
-                        width: 800px;
-                        height: 40px;
-                    }
-                    
-                    .content-parent {
-                        height: 0px;
-                        width: 800px;
-                        overflow: hidden;
-                        transition: height ease 0.3s;
-                    
-                        &.show {
-                            display: flex;
-                            width: 800px;
-                            height: 200px;
-                            border-radius: 0px 0px 5px 5px;
+        .collapses {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 5%;
+            margin-right: 5%;
 
-                            .content {
+            .collapse {
+                display: flex;
+                flex-direction: column;
+                width: 45%;
+
+                button {
+                    width: 100%;
+                    height: 40px;
+                }
+                
+                .content-parent {
+                    height: 0px;
+                    width: 100%;
+                    overflow: hidden;
+                    transition: height ease 0.3s;
+                
+                    &.show {
+                        display: flex;
+                        width: 100%;
+                        height: auto;
+                        border-radius: 0px 0px 5px 5px;
+
+                        .content {
+                            width: 100%;
+
+                            ul {
+                                display: flex;
+                                flex-direction: column;
                                 width: 100%;
-
-                                ul {
-                                    display: flex;
-                                    flex-direction: column;
-                                    width: 100%;
-                                    list-style: none;
-                                    padding: 10px 0;
-                                }
+                                list-style: none;
+                                padding: 0;
+                                margin: 0;
                             }
                         }
-                      }
+                    }
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+
+                .collapse {
+                    width: 100%;
                 }
             }
         }
     }
-}
