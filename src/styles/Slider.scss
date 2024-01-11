@@ -5,12 +5,12 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     position: relative;
 
     img {
-        height: 400px;
-        width: 100rem;
+        height: 415px;
+        width: 90%;
         object-fit: cover;
         border-radius: 25px;
     }
@@ -23,20 +23,18 @@
         padding: 0;
 
         img {
-            height: 50px;
+            height: 80px;
             width: 50px;
-            object-fit: cover;
-            border-radius: 50%;
         }
 
         &.left {
             position : absolute;
-            left: 10%;
+            left: 6%;
         }
 
         &.right {
             position : absolute;
-            right: 10%;
+            right: 6%;
 
             img {
                 transform: rotate(180deg);
@@ -46,11 +44,10 @@
 
     .slider-dots {
         position: absolute;
-        color: black;
+        color: white;
         font-size: 14px;
         left: 50%;
-        bottom: 10%;
-        // transform: translateY(160px);
+        bottom: 5%;
     }
     
 }

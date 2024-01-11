@@ -16,7 +16,7 @@ const Collapse = ({ title, content }) => {
             </button>
             <div className={isOpen ? 'content-parent show' : 'content-parent'}>
                 <div className='content'>
-                    <p>{content}</p>
+                    {content}
                 </div>
             </div>
         </div>

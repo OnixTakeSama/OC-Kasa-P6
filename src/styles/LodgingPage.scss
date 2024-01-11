@@ -1,0 +1,138 @@
+@use './variables/variables.scss' as *;
+
+.lodging-page {
+    display: flex;
+    flex-direction: column;
+
+    .lodging-info {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 5%;
+
+        .infos-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+            .title-location {
+                display: flex;
+                flex-direction: column;
+
+                h1 {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 30px;
+                    color: $primary-color;
+                    margin: 0;
+                }
+
+                h2 {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 20px;
+                    color: $primary-color;
+                    margin: 0;
+                }
+            }
+
+            .host {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 15x;
+                color: $primary-color;
+                font-weight: normal;
+
+                .host-picture {
+                    width: 65px;
+                    height: 65px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .infos-content {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+
+            .tags-rating {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .tags {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    gap: 10px;
+                    margin-bottom: 30px;
+
+                    .tag {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 15px;
+                        color: white;
+                        background-color: $primary-color;
+                        padding: 5px 10px;
+                        border-radius: 10px;
+                        width: 100px;
+                        height: 30px;
+                    }
+                }
+
+                .star.empty {
+                    filter: grayscale(100%);
+                }
+            }
+
+            .collapses {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .collapse {
+                    display: flex;
+                    flex-direction: column;
+                    width: 800px;
+
+                    button {
+                        width: 800px;
+                        height: 40px;
+                    }
+                    
+                    .content-parent {
+                        height: 0px;
+                        width: 800px;
+                        overflow: hidden;
+                        transition: height ease 0.3s;
+                    
+                        &.show {
+                            display: flex;
+                            width: 800px;
+                            height: 200px;
+                            border-radius: 0px 0px 5px 5px;
+
+                            .content {
+                                width: 100%;
+
+                                ul {
+                                    display: flex;
+                                    flex-direction: column;
+                                    width: 100%;
+                                    list-style: none;
+                                    padding: 10px 0;
+                                }
+                            }
+                        }
+                      }
+                }
+            }
+        }
+    }
+}
