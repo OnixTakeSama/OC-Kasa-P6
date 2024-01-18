@@ -15,7 +15,7 @@
     cursor: pointer;
     border: none;
     background-color: $primary-color;
-    width: 80%;
+    width: 90%;
     height: 80px;
     border-radius: 5px;
 
@@ -39,17 +39,7 @@
     height: 0px;
     overflow: hidden;
     transition: height ease 0.3s;
-    width: 80%;
-
-    &.show {
-      display: flex;
-      height: 130px;
-      border-radius: 0px 0px 5px 5px;
-
-      @media screen and (max-width: 768px) {
-        height: auto;
-      }
-    }
+    width: 90%;
   }
 
   .content {
